@@ -1,5 +1,4 @@
-# SpringBootCassandra
-Spring Boot Application with Cassandra DB
+# SpringBoot with Cassandra
 
 ## Running Cassandra in Local 
 #### To Install Cassandra in Mac
@@ -54,4 +53,21 @@ VALUES (1, 'Vicky', 'CSE', 2010);
 
 INSERT INTO Staff (id, name, dept, subjects) 
 VALUES (1, 'Selvam', 'CSE', ['Compiler Design', 'Operating System']);
+```
+
+Ok, now the DB is ready..! Lets start building the Spring Boot part
+
+Go to https://start.spring.io & choose dependecies web, cassandra. Note: Don't chose JPA dependency when you use Cassandra.
+
+In application.properties, give the keyspace name. 
+
+```
+spring.data.cassandra.keyspace-name=Sample
+```
+
+Create your own Repo interface extending CassandraRepository
+
+```java
+interface StudentRepo extends CassandraRepository<Student, Integer> {
+}
 ```
