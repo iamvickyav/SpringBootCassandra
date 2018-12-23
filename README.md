@@ -1,6 +1,23 @@
 # SpringBootCassandra
 Spring Boot Application with Cassandra DB
 
+## Running Cassandra in Local 
+#### To Install Cassandra in Mac
+```
+brew install Cassandra
+```
+
+#### To Start Cassandra
+
+```
+cassandra -f
+```
+
+#### To access Cassandra from Terminal
+```
+cqlsh
+```
+
 ## Creating Keyspace
 
 ```sql
