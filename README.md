@@ -18,15 +18,16 @@ cassandra -f
 cqlsh
 ```
 
-## Creating Keyspace
+## Getting Started with Cassandra
 
+#### Creating Keyspace
 ```sql
 CREATE KEYSPACE Sample WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
 
 use Sample;
 ```
 
-## Creating Cassandra Table
+#### Creating Cassandra Table
 
 ```sql
 CREATE TABLE Student(
@@ -45,7 +46,7 @@ CREATE TABLE Staff (
     PRIMARY KEY (id, dept)
 );
 ```
-## Inserting sample data in Table
+#### Inserting sample data in Table
 
 ```sql
 INSERT INTO Student (id, name, dept, year_of_joining) 
